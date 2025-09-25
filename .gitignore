@@ -7,3 +7,7 @@ errorReportSql.txt
 .RData
 .RHistory
 inst/doc
+
+# Demo output files (can be regenerated)
+*.db
+dbt_synthea_seeds/
