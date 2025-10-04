@@ -131,7 +131,8 @@ LoadVocabFromCsv <-
             suppressWarnings({
               DatabaseConnector::insertTable(
                 connection = conn,
-                tableName = paste0(cdmSchema, ".", strsplit(csv, "[.]")[[1]][1]),
+                databaseSchema = cdmSchema,
+                tableName = strsplit(csv, "[.]")[[1]][1],
                 data = chunk,
                 dropTableIfExists = FALSE,
                 createTable = FALSE,
