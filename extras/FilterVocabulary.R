@@ -129,7 +129,7 @@ for (table in vocabTables) {
   #data <- fixDates(data)
   insertTable(connection = connection,
               databaseSchema = cdmSchemaFiltered,
-              tableName = table,
+              tableName = toupper(table),
               data = data,
               tempTable = FALSE,
               createTable = FALSE,

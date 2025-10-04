@@ -100,7 +100,7 @@ LoadSyntheaTables <-
           DatabaseConnector::insertTable(
             conn,
             databaseSchema = syntheaSchema,
-            tableName = strsplit(csv, "[.]")[[1]][1],
+            tableName = toupper(strsplit(csv, "[.]")[[1]][1]),
             data = as.data.frame(syntheaTable),
             dropTableIfExists = FALSE,
             createTable = FALSE,
